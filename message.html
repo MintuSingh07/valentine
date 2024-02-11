@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message</title>
+</head>
+<body>
+    <input type="text" placeholder="Enter your valentine's name" id="nameInput">
+    <textarea placeholder="Enter your message" id="messageInput" cols="30" rows="10"></textarea>
+    <button onclick="saveMessage()">Result</button>
+
+    <script>
+        function saveMessage() {
+            var name = document.getElementById("nameInput").value;
+            var message = document.getElementById("messageInput").value;
+
+            // Retrieve existing messages from localStorage or initialize an empty array
+            var messages = JSON.parse(localStorage.getItem("valentineMessages")) || [];
+
+            // Add new message to the array
+            messages.push({ name: name, message: message });
+
+            // Store the updated messages array back to localStorage
+            localStorage.setItem("valentineMessages", JSON.stringify(messages));
+
+            // Redirect to the result page
+            window.location.href = "/result.html";
+        }
+    </script>
+</body>
+</html>
