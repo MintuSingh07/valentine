@@ -1,7 +1,6 @@
 :root {
     --primary: #fff;
     --bg-color: #ffb9d6;
-    ;
     --bg-envelope-color: #f5edd1;
     --envelope-tab: #ecdeb8;
     --envelope-cover: #e6cfa7;
@@ -9,12 +8,22 @@
     --txt-color: #444;
     --heart-color: rgb(252, 8, 122);
 }
-
-body {
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+    background: var(--bg-color);
+}
+nav > h1{
+    color: rgb(255, 0, 0);
+    padding: 1rem 0 0 2rem;
+}
+#body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: var(--bg-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -83,7 +92,7 @@ body {
 
 .heart {
     position: absolute;
-    top: 50%;
+    top: 56%;
     left: 50%;
     width: 15px;
     height: 15px;
@@ -127,4 +136,8 @@ body {
 .flap>.heart {
     transform: rotate(90deg);
     transition-delay: 0.4s;
+}
+
+#valentinesName{
+    color: crimson;
 }

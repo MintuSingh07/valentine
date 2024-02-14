@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,33 +8,26 @@
     <title>Result</title>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-    <div class="container">
-        <div class="envelope-wrapper">
-            <div class="envelope">
-                <div class="letter">
-                    <div class="text">
-                        <strong id="valentinesName"></strong>
-                        <p id="valentinesMessage"></p>
+    <nav><h1>Be My Valentine</h1></nav>
+    <div id="body">
+        <div class="container">
+            <div class="envelope-wrapper">
+                <div class="envelope">
+                    <div class="letter">
+                        <div class="text">
+                            <strong id="valentinesName">Dear, Sayantani</strong>
+                            <p id="valentinesMessage">Hey my valentine 🫂...you are meant to be mine and to the end of
+                                my life i will love you the same i do today...stay happy stay healthy and always
+                                stay mine.. 🤧🩷</p>
+                        </div>
                     </div>
                 </div>
+                <div class="heart"></div>
             </div>
-            <div class="heart"></div>
         </div>
     </div>
-    <script>
-        // Retrieve messages from localStorage
-        var messages = JSON.parse(localStorage.getItem("valentineMessages")) || [];
-        console.log(messages)
-
-        // If there are messages, display them
-        if (messages.length > 0) {
-            // Display the latest message
-            var latestMessage = messages[messages.length - 1];
-            document.getElementById("valentinesName").textContent = "Dear " + latestMessage.name + ".";
-            document.getElementById("valentinesMessage").textContent = latestMessage.message;
-        }
-    </script>
     <script>
         const envelope = document.querySelector('.envelope-wrapper');
         envelope.addEventListener('click', () => {
@@ -41,4 +35,5 @@
         });
     </script>
 </body>
+
 </html>
